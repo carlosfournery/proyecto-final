@@ -1,0 +1,16 @@
+{% extends 'ejemplo/base.html' %}
+{% block titulo%} Buscar Automoviles por Propietario {% endblock %}
+{% block contenido %}
+  
+  <form action="/automoviles/buscar" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+  </form>
+
+  {% for automovil in lista_automoviles %}
+      <ul>
+          <li> Propietario: {{automovil.propietario}}, Color: {{automovil.color}}, Marca: {{automovil.marca}}, Patente: {{automovil.patente}}</li>
+      </ul>
+  {% endfor %}
+{% endblock %}

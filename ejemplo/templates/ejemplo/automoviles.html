@@ -1,0 +1,15 @@
+{% extends 'ejemplo/base.html' %}
+{% block contenido %}
+{% for automovil in lista_automoviles %}
+<ul>
+    <li> Propietario: {{automovil.propietario}}, Marca: {{automovil.marca}}, Color: {{automovil.color}}, Patente: {{automovil.patente}}
+        <!-- Esto agrega un link al form de actulización-->
+        <a href='actualizar/{{ automovil.id }}'>Actualizar</a>
+    </li>
+</ul>
+{% endfor %}
+{%endblock %}
+
+{% block titulo%}
+Lista de todos mis Automoviles
+{% endblock %}
