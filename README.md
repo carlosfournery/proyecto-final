@@ -29,5 +29,6 @@ http://127.0.0.1:8000/mi-familia/alta Para crear un familiar nuevo
 
 http://127.0.0.1:8000/mi-familia/buscar Para buscar un familiar por nombre
 
-Reemplaza mi-familia por automoviles y mascotas respectivamente.ç
+Reemplaza mi-familia por automoviles y mascotas respectivamente.
+
 Muchas gracias!
