@@ -24,19 +24,10 @@ Ejemplos, reemplaza las URLs antes de mi-familia por las que te aparezcan cuando
 Familia
 
 http://127.0.0.1:8000/mi-familia : Para ver los familiares(sólo veras Familiares pre cargados si hiciste el paso 6)
+
 http://127.0.0.1:8000/mi-familia/alta Para crear un familiar nuevo
-http://127.0.0.1:8000/mi-familia/buscar Para buscar un familiar
 
-Automoviles
+http://127.0.0.1:8000/mi-familia/buscar Para buscar un familiar por nombre
 
-http://127.0.0.1:8000/automoviles/
-http://127.0.0.1:8000/automoviles/alta
-http://127.0.0.1:8000/automoviles/buscar
-
-Mascotas
-
-http://127.0.0.1:8000/mascotas/
-http://127.0.0.1:8000/mascotas/alta
-http://127.0.0.1:8000/mascotas/buscar
-
+Reemplaza mi-familia por automoviles y mascotas respectivamente.ç
 Muchas gracias!
