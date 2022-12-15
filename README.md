@@ -20,7 +20,9 @@ Para correr el programa, realizar los siguientes pasos:
 En la web hay 3 tipos de modelos: mi-familia, automoviles y mascotas:
 - Agrega las url que ves abajo a la url en la barra de direcciones para utilizarlas, las funciones Alta y Buscar están funcionando, las demás no están aún 100% testeadas.
 
-Ejemplos, reemplaza las URLs antes de mi-familia por las que te aparezcan cuando haces runserver!
+Ejemplos:
+(reemplaza las URLs antes de mi-familia por las que te aparezcan cuando haces runserver!)
+
 Familia
 
 http://127.0.0.1:8000/mi-familia : Para ver los familiares(sólo veras Familiares pre cargados si hiciste el paso 6)
