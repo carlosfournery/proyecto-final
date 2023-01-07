@@ -19,6 +19,7 @@ from ejemplo.views import (index, monstrar_familiares, mostrar_mascotas, mostrar
                             BuscarFamiliar, AltaFamiliar, ActualizarFamiliar, BuscarMascota, AltaMascotas, ActualizarMascota, 
                             BuscarAutomovil, AltaAutomoviles, ActualizarAutomovil, FamiliarDetalle, FamiliarList,
                             FamiliarCrear, FamiliarBorrar, FamiliarActualizar)
+from mi_blog.views import index, PostList, PostCrear
 
 
 urlpatterns = [
@@ -42,4 +43,7 @@ urlpatterns = [
     path('panel-familia/crear', FamiliarCrear.as_view()),
     path('panel-familia/<int:pk>/borrar', FamiliarBorrar.as_view()),
     path('panel-familia/<int:pk>/actualizar', FamiliarActualizar.as_view()),
+    path('mi_blog/', index, name='mi_blog_index'),
+    path('mi_blog/listar', PostList.as_view(), name = 'mi_blog_listar'),
+    path('mi_blog/crear', PostCrear.as_view(), name = 'mi_blog_crear'),
 ]
