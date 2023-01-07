@@ -19,7 +19,7 @@ from ejemplo.views import (index, monstrar_familiares, mostrar_mascotas, mostrar
                             BuscarFamiliar, AltaFamiliar, ActualizarFamiliar, BuscarMascota, AltaMascotas, ActualizarMascota, 
                             BuscarAutomovil, AltaAutomoviles, ActualizarAutomovil, FamiliarDetalle, FamiliarList,
                             FamiliarCrear, FamiliarBorrar, FamiliarActualizar)
-from mi_blog.views import index, PostList, PostCrear
+from mi_blog.views import index, PostDetalle, PostListar, PostCrear, PostBorrar, PostActualizar
 
 
 urlpatterns = [
@@ -44,6 +44,9 @@ urlpatterns = [
     path('panel-familia/<int:pk>/borrar', FamiliarBorrar.as_view()),
     path('panel-familia/<int:pk>/actualizar', FamiliarActualizar.as_view()),
     path('mi_blog/', index, name='mi_blog_index'),
-    path('mi_blog/listar', PostList.as_view(), name = 'mi_blog_listar'),
-    path('mi_blog/crear', PostCrear.as_view(), name = 'mi_blog_crear'),
+    path('mi_blog/<int:pk>/detalle/', PostDetalle.as_view(), name="mi_blog_detalle"),
+    path('mi_blog/listar/', PostListar.as_view(), name="mi_blog_listar"),
+    path('mi_blog/crear/', PostCrear.as_view(), name="mi_blog_crear"),
+    path('mi_blog/<int:pk>/borrar/', PostBorrar.as_view(), name="mi_blog_borrar"),
+    path('mi_blog/<int:pk>/actualizar/', PostActualizar.as_view(), name="mi_blog_actualizar"),
 ]

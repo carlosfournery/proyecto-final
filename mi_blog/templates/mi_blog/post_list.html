@@ -1,9 +1,14 @@
 {% extends 'mi_blog/base.html' %}
 
 {% block contenido %}
+<a href="{% url 'mi_blog_crear' %}">Crear Post</a>
 <ul>
 {% for post in object_list %}
-    <li>{{post.titulo}}</li>
+    <li>
+        {{post.publicado_el}} - - {{post.titulo}}  
+        <a href="{% url 'mi_blog_borrar' post.id %}">Borrar</a>
+        <a href="{% url 'mi_blog_actualizar' post.id %}">Actualizar</a>
+    </li>
 {% endfor %}
 </ul>
 {% endblock %}
