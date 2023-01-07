@@ -6,6 +6,6 @@ Familiar(nombre="Eugenia", direccion="Hernandarias 1098", numero_pasaporte=34534
 Familiar(nombre="Yvonne", direccion="Julian Alvarez 585", numero_pasaporte=567567).save()
 print("Se cargo con éxito los usuarios de pruebas")
 
-Mascota(propietario="Carlos", nombre="Toto", raza="Perro",edad=2).save()
+Mascota(propietario="Carlos", nombre="Toto", raza="Dalmata",edad=2).save()
 
 Automovil(propietario="Alberto",marca="Toyota",color="Azul",patente="AA111").save()
