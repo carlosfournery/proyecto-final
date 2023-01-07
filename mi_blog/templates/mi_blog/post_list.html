@@ -1,13 +1,18 @@
 {% extends 'mi_blog/base.html' %}
 
 {% block contenido %}
+{% if user.is_authenticated %}
 <a href="{% url 'mi_blog_crear' %}">Crear Post</a>
+{% endif %}
 <ul>
 {% for post in object_list %}
     <li>
-        {{post.publicado_el}} - - {{post.titulo}}  
-        <a href="{% url 'mi_blog_borrar' post.id %}">Borrar</a>
-        <a href="{% url 'mi_blog_actualizar' post.id %}">Actualizar</a>
+        {{post.publicado_el}} - - {{post.titulo}}
+        {% if user.is_authenticated %}  
+            <a href="{% url 'mi_blog_borrar' post.id %}">Borrar</a>
+            <a href="{% url 'mi_blog_actualizar' post.id %}">Actualizar</a>
+        {% endif %}
+        <a href="{% url 'mi_blog_detalle' post.id %}">Ver</a>
     </li>
 {% endfor %}
 </ul>

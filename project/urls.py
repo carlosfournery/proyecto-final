@@ -19,8 +19,9 @@ from ejemplo.views import (index, monstrar_familiares, mostrar_mascotas, mostrar
                             BuscarFamiliar, AltaFamiliar, ActualizarFamiliar, BuscarMascota, AltaMascotas, ActualizarMascota, 
                             BuscarAutomovil, AltaAutomoviles, ActualizarAutomovil, FamiliarDetalle, FamiliarList,
                             FamiliarCrear, FamiliarBorrar, FamiliarActualizar)
-from mi_blog.views import index, PostDetalle, PostListar, PostCrear, PostBorrar, PostActualizar
-
+from mi_blog.views import (index, PostDetalle, PostListar, PostCrear, 
+                            PostBorrar, PostActualizar, UserSignUp, UserLogin, UserLogout)
+from django.contrib.admin.views.decorators import staff_member_required
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -49,4 +50,7 @@ urlpatterns = [
     path('mi_blog/crear/', PostCrear.as_view(), name="mi_blog_crear"),
     path('mi_blog/<int:pk>/borrar/', PostBorrar.as_view(), name="mi_blog_borrar"),
     path('mi_blog/<int:pk>/actualizar/', PostActualizar.as_view(), name="mi_blog_actualizar"),
+    path('mi_blog/signup/', UserSignUp.as_view(), name="mi_blog_signup"),
+    path('mi_blog/login/', UserLogin.as_view(), name="mi_blog_login"),
+    path('mi_blog/logout/', UserLogout.as_view(), name="mi_blog_logout"),
 ]
