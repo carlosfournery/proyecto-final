@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from ejemplo.views import (index, monstrar_familiares, mostrar_mascotas, mostrar_automoviles, 
@@ -20,7 +22,8 @@ from ejemplo.views import (index, monstrar_familiares, mostrar_mascotas, mostrar
                             BuscarAutomovil, AltaAutomoviles, ActualizarAutomovil, FamiliarDetalle, FamiliarList,
                             FamiliarCrear, FamiliarBorrar, FamiliarActualizar)
 from mi_blog.views import (index, PostDetalle, PostListar, PostCrear, 
-                            PostBorrar, PostActualizar, UserSignUp, UserLogin, UserLogout)
+                            PostBorrar, PostActualizar, UserSignUp, UserLogin, UserLogout, 
+                            AvatarActualizar, UserActualizar, MensajeCrear, MensajeListar, MensajeDetalle)
 from django.contrib.admin.views.decorators import staff_member_required
 
 urlpatterns = [
@@ -53,4 +56,11 @@ urlpatterns = [
     path('mi_blog/signup/', UserSignUp.as_view(), name="mi_blog_signup"),
     path('mi_blog/login/', UserLogin.as_view(), name="mi_blog_login"),
     path('mi_blog/logout/', UserLogout.as_view(), name="mi_blog_logout"),
+    path('mi_blog/avatares/<int:pk>/actualizar/', AvatarActualizar.as_view(), name="mi_blog_avatares_actualizar"),
+    path('mi_blog/users/<int:pk>/actualizar/', UserActualizar.as_view(), name="mi_blog_users_actualizar"),
+    path('mi_blog/mensajes/crear/', MensajeCrear.as_view(), name="mi_blog_mensajes_crear"),
+    path('mi_blog/mensajes/listar/', MensajeListar.as_view(), name="mi_blog_mensajes_listar"),
+    path('mi_blog/mensajes/<int:pk>/detalle/', MensajeDetalle.as_view(), name="mi_blog_mensajes_detalle"),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

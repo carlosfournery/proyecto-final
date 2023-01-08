@@ -2,7 +2,10 @@
 
 {% block contenido %}
 {% if user.is_authenticated %}
-<a href="{% url 'mi_blog_crear' %}">Crear Post</a>
+    <a href="{% url 'mi_blog_crear' %}">Crear Post</a>
+    <a href="{% url 'mi_blog_avatares_actualizar' user.id %}">Actualizar Avatar</a> # No funca
+    <a href="{% url 'mi_blog_users_actualizar' user.id %}">Actualizar Perfil</a>
+    <a href="{% url 'mi_blog_mensajes_listar' %}">Mensajes</a>
 {% endif %}
 <ul>
 {% for post in object_list %}
@@ -17,3 +20,5 @@
 {% endfor %}
 </ul>
 {% endblock %}
+
+
