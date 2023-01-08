@@ -1,4 +1,4 @@
-# Entrega intermedia:
+# Entrega final:
 Para correr el programa, realizar los siguientes pasos:
 
 1 Abrir VSCode.
@@ -9,28 +9,19 @@ Para correr el programa, realizar los siguientes pasos:
 
 4 En la terminal ejecuta los comandos:
   python manage.py migrate
+  python manage.py makemigrations
   python manage.py runserver
  
-5 Ya se puede abrir la pagina que aparece en el texto, tipicamente: http://127.0.0.1:8000/
+5 Abrir la pagina http://127.0.0.1:8000/mi_blog
 
-6 Si quieres tener algunos datos precargados, en la terminal, ejecuta los comandos:
-  python manage.py shell
-  import seed_data
-  
-En la web hay 3 tipos de modelos: mi-familia, automoviles y mascotas:
-- Agrega las url que ves abajo a la url en la barra de direcciones para utilizarlas, las funciones Alta y Buscar están funcionando, las demás no están aún 100% testeadas.
+7 Las funcionalidades para anonimos solo son ver posts y enviar mensajes.
 
-Ejemplos:
-(reemplaza las URLs antes de mi-familia por las que te aparezcan cuando haces runserver!)
+8 Las funcionalidades para usuarios normales las mismas mas ver mensajes.
 
-Familia
+9 Los usuarios staff pueden crear posts pero no modificarlos ni borrarlos, solo los SuperUsers.
 
-http://127.0.0.1:8000/mi-familia : Para ver los familiares(sólo veras Familiares pre cargados si hiciste el paso 6)
+10 Solo el admin puede dar avatar a los usuarios, una vez concedido el permiso, el usuario puede actualizarlo.
 
-http://127.0.0.1:8000/mi-familia/alta Para crear un familiar nuevo
-
-http://127.0.0.1:8000/mi-familia/buscar Para buscar un familiar por nombre
-
-Reemplaza mi-familia por automoviles y mascotas respectivamente.
+6 El admin es Usuario admin, contraseña carlos1234 para poder dar permisos de superuser o avatares.
 
 Muchas gracias!
