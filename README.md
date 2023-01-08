@@ -11,6 +11,7 @@ Para correr el programa, realizar los siguientes pasos:
 3 Seleccionar o crear una carpeta para el programa.
 
 4 En la terminal ejecuta los comandos:
+  python manage.py startapp mi_blog
   python manage.py migrate
   python manage.py makemigrations
   python manage.py runserver
