@@ -4,7 +4,7 @@
 {% if user.is_authenticated %}
     <a href="{% url 'mi_blog_crear' %}">Crear Post</a>
     {% if user.avatar.imagen %}
-        <a href="{% url 'mi_blog_avatares_actualizar' user.id %}">Actualizar Avatar</a>
+        <a href="{% url 'mi_blog_avatares_actualizar' user.avatar.id %}">Actualizar Avatar</a>
     {% endif %}
     <a href="{% url 'mi_blog_users_actualizar' user.id %}">Actualizar Perfil</a>
     <a href="{% url 'mi_blog_mensajes_listar' %}">Mensajes</a>
@@ -13,7 +13,7 @@
 {% for post in object_list %}
     <li>
         {{post.publicado_el}} - - {{post.titulo}}
-        {% if user.is_authenticated %}  
+        {% if user.is_superuser %}  
             <a href="{% url 'mi_blog_borrar' post.id %}">Borrar</a>
             <a href="{% url 'mi_blog_actualizar' post.id %}">Actualizar</a>
         {% endif %}

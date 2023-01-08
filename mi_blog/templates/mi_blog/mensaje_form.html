@@ -1,8 +1,17 @@
 {% extends 'mi_blog/base.html' %}
 {% block contenido %}
-<form method = "POST">
+
+{% if messages %}
+     {% for message in messages %}
+         <div class="text-center alert alert-{{ message.tags }}">
+             {{ message|safe }}
+         </div>
+     {% endfor %}
+ {% endif %}
+
+<form method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <input type ="submit" value="Enviar">
+    <input type="submit" value="Enviar">
 </form>
 {% endblock %}

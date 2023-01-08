@@ -1,11 +1,23 @@
 {% extends 'mi_blog/base.html' %}
 
+
 {% block contenido %}
-    <h1>{{object.titulo}}</h1>
-    <h2>{{object.sub_titulo}}</h2>
-    <h6>{{object.publicado_el}}</h6>
     <div>
-        {{object.texto}}
+        De: {{object.nombre}}
     </div>
-    
+    <div>
+        Email contacto: {{object.email}}
+    </div>
+    <div>
+        <p>
+            Mensaje:
+            <br> 
+            {{object.texto}}
+        </p>
+    </div>
+    <div>
+        Enviado el: {{object.enviado_el}}
+    </div>
+    <br>
+    <a href="{% url 'mi_blog_mensajes_listar' %}">Lista de Mensajes</a>
 {% endblock %}
