@@ -1,4 +1,7 @@
 # Entrega final:
+
+El video está en https://youtu.be/ZqYMv-_qs-k 
+
 Para correr el programa, realizar los siguientes pasos:
 
 1 Abrir VSCode.
