@@ -22,6 +22,8 @@ Para correr el programa, realizar los siguientes pasos:
 
 10 Solo el admin puede dar avatar a los usuarios, una vez concedido el permiso, el usuario puede actualizarlo.
 
-6 El admin es Usuario admin, contraseña carlos1234 para poder dar permisos de superuser o avatares.
+11 El admin es Usuario admin, contraseña carlos1234 para poder dar permisos de superuser o avatares.
+
+12 Una vez como admin se puede actualizar y borrar los posts y borrar los mensajes.
 
 Muchas gracias!
